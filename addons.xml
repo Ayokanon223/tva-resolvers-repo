@@ -509,7 +509,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.30" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.31" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six" />
@@ -772,7 +772,7 @@ Version 0.0.6 (April 05, 2021)
     </extension>
 </addon>
 
-<addon id="repository.xbmchub" name="TVADDONS.CO Add-on Repository" version="3.0.0" provider-name="tvaddons">
+<addon id="repository.xbmchub" name="TVADDONS.CO Add-on Repository" version="4.0.0" provider-name="tvaddons">
 	<extension point="xbmc.addon.repository" name="TVADDONS.CO Add-on Repository">
 	<dir>
 		<info compressed="false">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml</info>
@@ -780,10 +780,16 @@ Version 0.0.6 (April 05, 2021)
 		<datadir zip="true">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/zips/</datadir>
 	</dir>
 
-    <dir>
-		<info compressed="false">https://github.com/tvaddonsco/tva-release-repo/raw/master/addons.xml</info>
-		<checksum>https://github.com/tvaddonsco/tva-release-repo/raw/master/addons.xml.md5</checksum>
-		<datadir zip="true">https://github.com/tvaddonsco/tva-release-repo/raw/master/</datadir>
+    <dir minversion="18.0" maxversion="18.9.0">
+		<info compressed="false">https://github.com/tvaddonsco/tva-release-repo/raw/master/leia/addons.xml</info>
+		<checksum>https://github.com/tvaddonsco/tva-release-repo/raw/master/leia/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/tvaddonsco/tva-release-repo/raw/master/leia/</datadir>
+    </dir>
+
+    <dir minversion="19.0">
+		<info compressed="false">https://github.com/tvaddonsco/tva-release-repo/raw/master/matrix/addons.xml</info>
+		<checksum>https://github.com/tvaddonsco/tva-release-repo/raw/master/matrix/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/tvaddonsco/tva-release-repo/raw/master/matrix/</datadir>
     </dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
@@ -865,15 +871,16 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 	</extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="6.1.01" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="6.1.02" provider-name="tvaddons">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six" />
         <import addon="script.module.kodi-six" />
+        <import addon="plugin.program.indigo" />
+        <import addon="repository.xbmchub" />
         <import addon="plugin.video.youtube" optional="true" />
         <import addon="script.module.python.twitch" optional="true" />
         <import addon="plugin.googledrive" optional="true" />
-        <import addon="plugin.program.indigo" />
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.python.pluginsource" library="lib/default.py" />

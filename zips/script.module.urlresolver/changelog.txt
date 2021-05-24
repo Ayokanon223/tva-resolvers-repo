@@ -1,10 +1,15 @@
-Version 6.1.01 (May 13, 2021)
+Version 6.1.02 (May 24, 2021)
 - Code Base Changes:
-    - dependency update
+    - helpers update
 - Resolvers Added:
     - none
 - Resolvers Fixed/Updated:
-    - none
+    - cocoscope
+    - daxab
+    - googlevideo
+    - lbry
+    - playtube
+    - sbembed
 - Resolvers Removed
     - none
 - Languages Added/Updated
