@@ -509,7 +509,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.34" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.36" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six" />
@@ -592,7 +592,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl.pluginsgr" version="0.0.13" name="PluginsGR" provider-name="Twilight0">
+<addon id="script.module.resolveurl.pluginsgr" version="0.0.14" name="PluginsGR" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.resolveurl" version="5.1.28" />
@@ -602,7 +602,11 @@ v1.0.25 (marcelveldt)
 		<summary lang="en">Main resolvers, useful for converting html/js into playable content from various hosts (Greek ones).</summary>
 		<description lang="en">Main resolvers, useful for converting html/js into playable content from various hosts (Greek ones).</description>
 		<platform>all</platform>
-		<news>Version 0.0.13(April 16, 2021)
+		<news>Version 0.0.14(June 9, 2021)
+- Remove highstream
+- Mitigate ert plugin by adding referer to the headers
+
+Version 0.0.13(April 16, 2021)
 - Remove userload &amp; wolfstream as they are not working
 
 Version 0.0.9 - 0.0.12 (April 16, 2021)
@@ -643,7 +647,7 @@ Version 0.0.6 (April 05, 2021)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl.xxx" version="2.1.13" name="Adult Resolver SMR Extension" provider-name="gujal">
+<addon id="script.module.resolveurl.xxx" version="2.1.15" name="Adult Resolver SMR Extension" provider-name="gujal">
 	<requires>
 		<!-- <import addon="xbmc.python" version="2.1.0"/> -->
         <import addon="script.module.resolveurl" version="5.1.0" />
@@ -886,7 +890,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 	</extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="6.1.03" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="6.1.04" provider-name="tvaddons">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six" />
@@ -895,7 +899,6 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
         <import addon="script.module.python.twitch" optional="true" />
         <import addon="plugin.googledrive" optional="true" />
         <import addon="plugin.program.indigo" />
-        <import addon="repository.xbmchub" />
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.python.pluginsource" library="lib/default.py" />
